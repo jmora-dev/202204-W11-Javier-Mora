@@ -1,3 +1,4 @@
+import { getNextKeyDef } from "@testing-library/user-event/dist/keyboard/getNextKeyDef";
 import { useEffect, useState } from "react";
 import { iGentleman } from "../interfaces/iGentleman";
 import {
@@ -26,7 +27,7 @@ export default function GentlemanList() {
       updateGentleman(gentleman.id, { selected: selectValue })
     );
     Promise.all(promises).then((res) => {
-      console.log(res);
+      setGentlemanList(res);
     });
   };
 

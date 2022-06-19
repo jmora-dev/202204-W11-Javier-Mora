@@ -18,7 +18,7 @@
       "picture": "fary.jpg",
       "alternativeText": "The Fary pointing at you",
       "id": 2,
-      "selected": false
+      "selected": true
     },
     {
       "id": 3,
