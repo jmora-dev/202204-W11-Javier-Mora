@@ -1,6 +1,14 @@
-# Week 10 - Challenge
+# Week 11 - Challenge
 
-## Gentlemen pointing at you React
+Continuar sobre el challenge de la semana anterior.
+
+Empezamos a escalar el la aplicación y testeamos todo lo posible. APLICAR TESTING y lo visto esta semana:
+
+- Añadir persistencia de datos. Que los lea de un JSON server
+- Tenemos tests y testeamos fetch
+- Añadir opción de Crear gentleman para completar CRUD operations
+
+## Challenge semana anterior - Gentlemen pointing at you React
 
 Crea una aplicación React a partir de esta maqueta. Identifica qué datos del HTML actual son dinámicos y prográmalos para que se alimenten a partir del array proporcionado.
 
