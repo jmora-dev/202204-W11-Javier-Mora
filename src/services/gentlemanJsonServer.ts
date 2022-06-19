@@ -20,13 +20,3 @@ export const updateGentleman = (
     body: JSON.stringify(update),
   }).then((res) => res.json());
 };
-
-export const updateAllGentleman = (
-  update: Partial<iGentleman>
-): Promise<iGentleman> => {
-  return fetch(url, {
-    method: "PATCH",
-    headers: { "Content-type": "application/json" },
-    body: JSON.stringify(update),
-  }).then((res) => res.json());
-};
