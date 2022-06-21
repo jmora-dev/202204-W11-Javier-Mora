@@ -25,6 +25,7 @@ export default function GentlemanCardButton({
     <i
       className={"icon gentleman__icon" + variantClass(variant)}
       onClick={action}
+      role="button"
     />
   );
 }
