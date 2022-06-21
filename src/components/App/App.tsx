@@ -1,4 +1,4 @@
-import GentlemanList from "./GentlemanList";
+import GentlemanList from "../GentlemanList/GentlemanList";
 
 import "../css/styles.css";
 

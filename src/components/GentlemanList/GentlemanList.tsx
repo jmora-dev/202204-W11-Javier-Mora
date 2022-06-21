@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { iGentleman } from "../interfaces/iGentleman";
+import { iGentleman } from "../../interfaces/iGentleman";
 import {
   deleteGentleman,
   getAllGentleman,
   updateGentleman,
-} from "../services/gentlemanJsonServer";
-import Gentleman from "./Gentleman";
-import SelectAllButton from "./SelectAllButton";
+} from "../../services/gentlemanJsonServer";
+import GentlemanCard from "../GentlemanCard/GentlemanCard";
+import SelectAllButton from "../SelectAllButton/SelectAllButton";
 
 export default function GentlemanList() {
   const [gentlemanList, setGentlemanList] = useState<Array<iGentleman>>([]);
@@ -69,7 +69,7 @@ export default function GentlemanList() {
       </div>
       <ul className="gentlemen">
         {gentlemanList.map((data) => (
-          <Gentleman
+          <GentlemanCard
             key={data.id}
             data={data}
             selectGentleman={() => selectById(data.id)}
