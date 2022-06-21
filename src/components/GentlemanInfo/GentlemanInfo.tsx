@@ -1,6 +1,6 @@
-import { iGentleman } from "../interfaces/iGentleman";
+import { iGentleman } from "../../interfaces/iGentleman";
 
-export default function Info({ data }: { data: iGentleman }) {
+export default function GentlemanInfo({ data }: { data: iGentleman }) {
   return (
     <div className="gentleman__data-container">
       <h2 className="gentleman__name">{data.name}</h2>

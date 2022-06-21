@@ -1,8 +1,10 @@
-import { iGentleman } from "../interfaces/iGentleman";
-import GentlemanCardButton, { BUTTON_VARIANTS } from "./GentlemanCardButton";
-import Info from "./Info";
+import { iGentleman } from "../../interfaces/iGentleman";
+import GentlemanCardButton, {
+  BUTTON_VARIANTS,
+} from "../GentlemanCardButton/GentlemanCardButton";
+import GentlemanInfo from "../GentlemanInfo/GentlemanInfo";
 
-export default function Gentleman({
+export default function GentlemanCard({
   data,
   selectGentleman,
   deleteGentleman,
@@ -23,7 +25,7 @@ export default function Gentleman({
           {data.picture[0].toUpperCase()}
         </span>
       </div>
-      <Info data={data} />
+      <GentlemanInfo data={data} />
       <GentlemanCardButton
         action={selectGentleman}
         variant={BUTTON_VARIANTS.SUCCESS}
