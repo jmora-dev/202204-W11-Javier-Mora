@@ -11,10 +11,11 @@ describe("Given GentlemanCardButton component", () => {
           action={() => {}}
         />
       );
-      const element = screen.getByRole("button", {
-        class: /gentleman__icon--delete fas fa-times/,
-      });
-      expect(element).toBeInTheDocument();
+      const element = screen.getByRole("button");
+      expect(element).toHaveAttribute(
+        "class",
+        expect.stringContaining("gentleman__icon--delete fas fa-times")
+      );
     });
   });
 
@@ -26,10 +27,11 @@ describe("Given GentlemanCardButton component", () => {
           action={() => {}}
         />
       );
-      const element = screen.getByRole("button", {
-        class: /fas fa-check/,
-      });
-      expect(element).toBeInTheDocument();
+      const element = screen.getByRole("button");
+      expect(element).toHaveAttribute(
+        "class",
+        expect.stringContaining("fas fa-check")
+      );
     });
   });
 

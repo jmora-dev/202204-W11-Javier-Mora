@@ -33,15 +33,13 @@ describe("Given GentlemanInfo component", () => {
         twitter: "twitter",
       };
       render(<GentlemanInfo data={data} />);
-      const element = screen.getAllByRole("listitem", {
-        class: "gentleman__data",
-      });
+      const element = screen.getAllByRole("listitem");
       expect(element[0]).toHaveTextContent(/developer/i);
     });
   });
 
-  describe("When status is developer", () => {
-    test("the first list item should have text developer", () => {
+  describe("When status is alive", () => {
+    test("the second list item should have text alive", () => {
       const data = {
         id: 1,
         alternativeText: "alternativeText",
@@ -53,15 +51,13 @@ describe("Given GentlemanInfo component", () => {
         twitter: "twitter",
       };
       render(<GentlemanInfo data={data} />);
-      const element = screen.getAllByRole("listitem", {
-        class: "gentleman__data",
-      });
+      const element = screen.getAllByRole("listitem");
       expect(element[1]).toHaveTextContent(/alive/i);
     });
   });
 
-  describe("When twitter is developer", () => {
-    test("the first list item should have text developer", () => {
+  describe("When twitter is @twitterDir", () => {
+    test("the third list item should have text @twitterDir", () => {
       const data = {
         id: 1,
         alternativeText: "alternativeText",
@@ -73,9 +69,7 @@ describe("Given GentlemanInfo component", () => {
         twitter: "@twitterDir",
       };
       render(<GentlemanInfo data={data} />);
-      const element = screen.getAllByRole("listitem", {
-        class: "gentleman__data",
-      });
+      const element = screen.getAllByRole("listitem");
       expect(element[2]).toHaveTextContent(/@twitterDir/i);
     });
   });
